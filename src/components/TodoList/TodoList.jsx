@@ -1,8 +1,8 @@
 import React from 'react';
+import TodoItem from '../TodoItem/TodoItem'; // ייבוא הקומפוננטה מהתיקייה הסמוכה
 import './TodoList.css';
 
 function TodoList() {
-  // הגדרת מערך מקומי המכיל לפחות 3 מחרוזות של משימות
   const initialTasks = [
     'ללמוד React ו-Hooks',
     'לבצע קומיט מסודר ב-Git',
@@ -14,11 +14,9 @@ function TodoList() {
       <h1 className="todo-title">רשימת משימות</h1>
       
       <ul className="todo-list">
-        {/* מעבר בלולאת map על כל משימה והצגתה כאלמנט ברשימה */}
+        {/* שימוש בקומפוננטת TodoItem והעברת המשימה דרך prop בשם title */}
         {initialTasks.map((task, index) => (
-          <li key={index} className="todo-item-basic">
-            {task}
-          </li>
+          <TodoItem key={index} title={task} />
         ))}
       </ul>
     </div>
