@@ -38,3 +38,49 @@
   color: #334155;
   font-size: 15px;
 }
+/* טופס הוספת משימה */
+.todo-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+/* שדה קלט */
+.todo-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  font-family: inherit;
+}
+
+.todo-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* כפתור אישור */
+.todo-submit-btn {
+  padding: 10px 18px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.todo-submit-btn:hover {
+  background-color: #2563eb;
+}
+
+/* הודעת שגיאה במקרה של קלט ריק או כפול */
+.error-msg {
+  color: #dc2626;
+  font-size: 14px;
+  margin-top: -12px;
+  margin-bottom: 14px;
+}
